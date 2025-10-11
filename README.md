@@ -52,8 +52,8 @@ heshuangshuang-demo/
 ├── js/
 │   └── script.js       # 交互脚本
 ├── images/             # 图片资源目录
-│   ├── profile.jpg     # 个人头像（待添加）
-│   └── wechat-qr.jpg   # 微信二维码（待添加）
+│   ├── profile.jpg     # 个人头像
+│   └── wechat-qr.jpg   # 微信二维码
 └── README.md           # 项目说明
 ```
 
