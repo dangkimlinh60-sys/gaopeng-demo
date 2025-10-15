@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  gaopeng-demo:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+    restart: unless-stopped
+    container_name: gaopeng-demo
+
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./ssl:/etc/nginx/ssl:ro
+    depends_on:
+      - gaopeng-demo
+    restart: unless-stopped
+    container_name: gaopeng-nginx
